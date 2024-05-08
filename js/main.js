@@ -21,15 +21,12 @@ let carrito = [];
 
 // Función para obtener los productos desde el archivo JSON
 const getProducts = async () => {
-    try {
-        const response = await fetch("../data/productos.json");
+    
+        const response = await fetch("data.json");
         const data = await response.json();
-        // Una vez que se obtienen los datos, puedo manipularlos y mostrar los productos
-        showProducts(data);
-    } catch (error) {
-        console.error("Error al obtener los productos:", error);
-    }
-}
+        console-log(data);
+         }
+  
 
 // Función para mostrar los productos en la tienda en línea
 const showProducts = (products) => {
