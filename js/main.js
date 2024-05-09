@@ -7,7 +7,7 @@ $(document).ready(function() {
         $("p").hide();
     });
 
-    // Manejar clic en el botón "Mostrar párrafos"
+    // Manejar clic en el botón "Mostrar párrafos".
     $("#mostrarParrafos").click(function() {
         $("p").show();
     });
