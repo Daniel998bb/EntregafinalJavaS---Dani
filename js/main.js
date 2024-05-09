@@ -37,7 +37,7 @@ const showProducts = (products) => {
         let content = document.createElement("div");
         content.className = "card";
         content.innerHTML = `
-            <img src="./data.json${product.img}">
+            <img src="./js${product.img}">
             <h3>${product.nombre}</h3>
             <p class="price">${product.precio} $</p>
         `;
