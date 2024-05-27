@@ -22,7 +22,7 @@ let carrito = [];
 // Función para obtener los productos desde el archivo JSON
 const getProducts = async () => {
     try {
-        const response = await fetch("../js/data.json");
+        const response = await fetch("./js/data.json");
         const data = await response.json();
         // Una vez que se obtienen los datos, puedo manipularlos y mostrar los productos
         showProducts(data);
@@ -37,7 +37,7 @@ const showProducts = (products) => {
         let content = document.createElement("div");
         content.className = "card";
         content.innerHTML = `
-            <img src="./js${product.img}">
+            <img src="${product.img}">
             <h3>${product.nombre}</h3>
             <p class="price">${product.precio} $</p>
         `;
@@ -101,7 +101,7 @@ verCarrito.addEventListener("click", () => {
 
     modalHeader.appendChild(modalbutton);
 
-    carrito.forEach((product, index) => {
+    carrito.forEach((product) => {
         // Código para crear y agregar elementos de los productos al carrito
         let carritoContent = document.createElement("div");
         carritoContent.className = "modal-content";
